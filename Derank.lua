@@ -36,7 +36,5 @@ client.set_event_callback("round_freeze_end", function()
             local delay = 5 + ((rounds_won_enemy+team_index-1) % #teammates)*0.1
             client.delay_call(delay, client.exec, "disconnect")
             client.delay_call(delay+0.2, reconnectfunc)
-        else
-            return
         end
 end)
